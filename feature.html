@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bruno Pizzeria" />
+    <meta name="keywords" content="Assignment 2" />
+    <meta name="author" content="David Anggawijaya" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="Js/script.js" defer></script>
+    <title>Bruno Pizzeria</title>
+</head>
+<body>
+    <!-- Loading Page, waiting until all image has been loaded -->
+
+    <div class="loading-section">
+        <div class="content-wrapper">
+            <img src="../Images/pizza.png" alt="pizza">
+            <!-- Image taken from https://www.flaticon.com/premium-icon/pizza_706934?term=pizza&page=1&position=2&page=1&position=2&related_id=706934&origin=search -->
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- register page pop up -->
+
+    <div class="register-page">
+        <img src="../Images/close.png" alt="close button">
+        <p>Register For an Account</p>
+        <div class="page-content">
+            <form id="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="POST">
+                
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <span class="error-msg correct">Invalid Username can only have latters A-Z</span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-msg correct">Invalid Email or Email not exist</span>
+
+                <label for="pwd1">New Password:</label>
+                <input type="password" name="pwd1" id="pwd1">
+                <span class="error-msg correct">Invalid password</span>
+
+                <label for="pwd2">Retype Password:</label>
+                <input type="password" name="pwd2" id="pwd2">
+                <span class="error-msg correct">Password not match</span>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <label for="pizza">Favorite Pizza:</label>
+                <select name="fav_pizza" id="pizza">
+                    <option value="none">None</option>
+                    <option value="Meat lover">Meat Lover</option>
+                    <option value="Deluxe Vegetables">Deluxe Vegetables</option>
+                    <option value="Deluxe Cheese">Deluxe Cheese</option>
+                </select>
+
+                <div class="allow-checkbox">
+                    <input type="checkbox" name="notify" id="notify" value="true">
+                    <label for="notify">Allow Bruno Pizzeria to send notification related our new recipe</label>
+                </div>
+
+                <div class="form-btn">
+                    <input class= "reset-btn" type="reset">
+                    <input class= "submit-btn" type="submit" value="submit">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="layer"></div>
+
+    <!-- Nav bar menu -->
+    <header>
+        <nav class="navbar">
+            <a class="nav-logo" href="">Bruno <span>Pizzeria</span></a>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li class="register-btn">Register</li>
+                <li><a class="active" href="feature.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="feature-page">
+            <div id="section-title">
+                <h1>Website <span>Features</span></h1></div>
+            <div>
+                <a href="../html/home.html">Nav Bar Scroll Animation</a>
+                <p>In desktop version, when a user scroll down the page the navbar will hide itself and will only show again if the user scroll up.</p>
+            </div>
+
+            <div>
+                <a href="../html/home.html">Button hover animation</a>
+                <p>Button animate when mouse hover around it</p>
+            </div>
+
+            <div>
+                <a href="../html/home.html#pizza-type-section">Automatic slide show</a>
+                <p>The slide show automatically change image for every 3 seconds.</p>
+            </div>
+
+            <div>
+                <a href="../html/home.html#menu-section">Pizza card animation</a>
+                <p>Animate when mouse is hover on top of it</p>
+            </div>
+
+            <div>
+                <a href="#">Pop up Register page</a>
+                <p>Instead redirecting the user to another page, when clicking register menu in the navbar the user will see a pop up page for register.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">Inline error message and pop up alert</a>
+                <p>Both order form and register form use inline and pop up error messages.</p>
+            </div>
+
+            <div>
+                <a href="">Highlight menu</a>
+                <p>Highlight the menu item in the navigator corresponding to the current webpage.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">Choosing cards</a>
+                <p>When user choose online payment, it allow users to choose from three types of credit card: Visa, MasterCard and American Express. Based on the type of credit card, limit the length of the credit card number, 16 digits for Visa and MasterCard, 15 digits for American Express.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">Extent Form</a>
+                <p>when user choose delivery or pay online an extra fields of form will appear.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">same as delivery address option</a>
+                <p> When this checkbox is checked, the fields for billing address will be filled with the delivery address automatically. If the delivery address is not completed when this checkbox is checked, display an alert or inline message: “Please enter your delivery address first”.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">Disable field</a>
+                <p>When user choose pay with online, they will see card number field is disable, hovewer once they click on any card, the card number field is active again.</p>
+            </div>
+
+            <div>
+                <a href="../html/order.html">Disable submit button</a>
+                <p>If the form submitted is still not correct, the submit button will stays disable</p>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>

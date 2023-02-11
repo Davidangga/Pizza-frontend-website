@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bruno Pizzeria" />
+    <meta name="keywords" content="Assignment 2" />
+    <meta name="author" content="David Anggawijaya" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Bruno Pizzeria</title>
+    <script src="Js/script.js" defer></script>
+    <script src="Js/home-animation.js" defer></script>
+
+</head>
+<body>
+
+    <!-- Loading Page, waiting until all image has been loaded -->
+
+    <div class="loading-section">
+        <div class="content-wrapper">
+            <img src="../Images/pizza.png" alt="pizza">
+            <!-- Image taken from https://www.flaticon.com/premium-icon/pizza_706934?term=pizza&page=1&position=2&page=1&position=2&related_id=706934&origin=search -->
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- register page pop up -->
+
+    <div class="register-page">
+        <img src="../Images/close.png" alt="close button">
+        <p>Register For an Account</p>
+        <div class="page-content">
+            <form id="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="POST">
+                
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <span class="error-msg correct">Invalid Username can only have latters A-Z</span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-msg correct">Invalid Email or Email not exist</span>
+
+                <label for="pwd1">New Password:</label>
+                <input type="password" name="pwd1" id="pwd1">
+                <span class="error-msg correct">Invalid password</span>
+
+                <label for="pwd2">Retype Password:</label>
+                <input type="password" name="pwd2" id="pwd2">
+                <span class="error-msg correct">Password not match</span>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <label for="pizza">Favorite Pizza:</label>
+                <select name="fav_pizza" id="pizza">
+                    <option value="none">None</option>
+                    <option value="Meat lover">Meat Lover</option>
+                    <option value="Deluxe Vegetables">Deluxe Vegetables</option>
+                    <option value="Deluxe Cheese">Deluxe Cheese</option>
+                </select>
+
+                <div class="allow-checkbox">
+                    <input type="checkbox" name="notify" id="notify" value="true">
+                    <label for="notify">Allow Bruno Pizzeria to send notification related our new recipe</label>
+                </div>
+
+                <div class="form-btn">
+                    <input class= "reset-btn" type="reset">
+                    <input class= "submit-btn" type="submit" value="submit">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="layer"></div>
+
+    <!-- Nav bar menu -->
+    <header>
+        <nav class="navbar">
+            <a class="nav-logo" href="">Bruno <span>Pizzeria</span></a>
+            <ul class="nav-menu">
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li class="register-btn">Register</li>
+                <li><a href="feature.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content for Home page -->
+    <main>
+        <!-- Intro Section -->
+        <section id="intro-section">
+            <div id="intro-content">
+                <div>
+                    <h1>Welcome,</h1>
+                    <h1>To Bruno <span class="typing-animation">Pizzeria</span></h1>
+                    <h2>Take a look at our delicious menu...</h2>
+                    <a class="btn" href="menu.html">View Menu</a>
+                </div>
+            </div>
+
+            <div id="intro-image">
+                <img src="../Images/Pizza_Icon.png" alt="pizza icon">
+                <!--  -->
+            </div>
+        </section>
+
+        <!-- pizza type section -->
+
+        <section id="pizza-type-section">
+            <div id="slider"> 
+                <input type="radio" name="slide" id="slider1" checked>
+                <input type="radio" name="slide" id="slider2">
+                <input type="radio" name="slide" id="slider3">
+
+                <div id="slides-container">
+                    <div id ="slide1">
+                        <img src="../images/meaty.png" alt="Meaty Pizza">
+                    </div>
+                    <div id="slide2">
+                        <img src="../images/veggie.png" alt="Veggie Pizza">
+                    </div>
+                    <div id="slide3">
+                        <img src="../images/cheesy.png" alt="Cheesy Pizza">
+                    </div>
+                </div>
+
+                <div id="pizza-type-content">
+                    <h1>Variety Of <span>Pizza</span></h1>
+                    <p>We sell many kind of pizzas from our secret homemade ingredients. Our pizzas are categorized into three; Meaty Pizza, Veggie Pizza, and Cheesy Pizza. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quia mollitia dolorum doloremque blanditiis. Iure dolorem accusantium, quibusdam mollitia commodi pariatur obcaecati asperiores repudiandae neque earum porro ex modi repellat?</p>
+                </div>
+
+                <div class="opacity"></div>
+
+                <div id="bullet-nav">
+                    <label for="slider1"></label>
+                    <label for="slider2"></label>
+                    <label for="slider3"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu section -->
+        <section id="menu-section">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Our <span>Menu</span></h1>
+                </div>
+    
+                <div class="section-content">
+                    <div class="card-container">
+                        <div class="card-content">
+                            <img class="card-image meaty" src="../Images/meat_lover_pizza.png" alt="meat lover pizza">
+                            <!-- image taken from https://www.kindpng.com/picc/m/353-3536305_meat-lovers-pizza-png-transparent-png.png -->
+                            <h2 class="card-title">Meat Lover Pizza</h2>
+
+                            <div class="lower-part">
+                                <div class="price">
+                                    <img src="../Images/dollar.png" alt="dollar sign">
+                                    <span>6.5</span>
+                                </div>
+
+                                <div class="rating">
+                                    <img src="../Images/star.png" alt="rating star">
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-btn">
+                            <a href="order.html"> 
+                                <img src="../Images/cart.png" alt="cart icon"> 
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container">
+                        <div class="card-content">
+                            <img class="card-image cheese" src="../Images/deluxe_cheese_pizza.png" alt="Deluxe Cheese pizza">
+                            <h2 class="card-title">Deluxe Cheese Pizza</h2>
+
+                            <div class="lower-part">
+                                <div class="price">
+                                    <img src="../Images/dollar.png" alt="dollar sign">
+                                    <span>6.5</span>
+                                </div>
+
+                                <div class="rating">
+                                    <img src="../Images/star.png" alt="rating star">
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-btn">
+                            <a href="order.html"> 
+                                <img src="../Images/cart.png" alt="cart icon"> 
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card-content">
+                            <img class="card-image pepperoni" src="../Images/pepperoni_pizza.png" alt="Deluxe Cheese pizza">
+                            <h2 class="card-title">Pepperoni Pizza</h2>
+
+                            <div class="lower-part">
+                                <div class="price">
+                                    <img src="../Images/dollar.png" alt="dollar sign">
+                                    <span>6.5</span>
+                                </div>
+
+                                <div class="rating">
+                                    <img src="../Images/star.png" alt="rating star">
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-btn">
+                            <a href="order.html"> 
+                                <img src="../Images/cart.png" alt="cart icon"> 
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card-content">
+                            <img class="card-image veggie" src="../Images/vegetarian_pizza.png" alt="Deluxe Cheese pizza">
+                            <!-- image taken from https://www.pngitem.com/pimgs/m/248-2486809_transparent-vegetable-pizza-png-png-download.png -->
+                            <h2 class="card-title">Vegetarian Pizza</h2>
+
+                            <div class="lower-part">
+                                <div class="price">
+                                    <img src="../Images/dollar.png" alt="dollar sign">
+                                    <span>6.5</span>
+                                </div>
+
+                                <div class="rating">
+                                    <img src="../Images/star.png" alt="rating star">
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-btn">
+                            <a href="order.html"> 
+                                <img src="../Images/cart.png" alt="cart icon"> 
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Location section -->
+        <section id="location-section">
+            <div class="container">
+                <div class="section-title">
+                    <h1>Find Our <span>Restaurant</span></h1>
+                </div>
+    
+                <div class="section-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100102.8693606539!2d-81.16290629248327!3d29.19349450860786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e6d79d6532e343%3A0x66d990366b565802!2sBruno%20Pizzeria!5e0!3m2!1sen!2sid!4v1634397027777!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About us section -->
+        <section id="about-section">
+            <img src="../Images/pizza_oven.jpg" alt="pizza in oven">
+            <!-- image taken from https://images.unsplash.com/photo-1621538997517-58ce53933faa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80 -->
+            <div class="opacity"></div>
+            <div class="section-title">
+                <h1><span>About</span> Us</h1>
+            </div>
+
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste error tenetur rem fugiat officiis, 
+                    corrupti quidem cumque ut sequi facilis illo, ducimus debitis laboriosam, voluptas eum reiciendis. 
+                    Quis, nostrum! Nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nam illum 
+                    placeat architecto ut magni quidem eos quibusdam fugit quisquam fuga consequatur, delectus tempore culpa, 
+                    assumenda eum laborum error quod.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Contact section  -->
+        <section id="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h1><span>Contact</span> Us</h1>
+                </div>
+    
+                <div class="section-content">  
+                    <form action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="POST"> 
+                        <input type="text" name="user_name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="comment"  cols="30" rows="10" placeholder="Comments..."></textarea>
+                        <input class="btn" type="submit">
+                        
+                    </form>
+                    
+                    <div id="my-email">
+                        <h4><span>Our</span> Email:</h4>
+                        <a href="mailto:user@gmail.com">user@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

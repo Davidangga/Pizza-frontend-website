@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bruno Pizzeria" />
+    <meta name="keywords" content="Assignment 2" />
+    <meta name="author" content="David Anggawijaya" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="Js/order.js" defer></script>
+    <script src="Js/script.js" defer></script>
+    <title>Bruno Pizzeria</title>
+</head>
+<body>
+    <!-- Loading Page, waiting until all image has been loaded -->
+
+    <div class="loading-section">
+        <div class="content-wrapper">
+            <img src="../Images/pizza.png" alt="pizza">
+            <!-- Image taken from https://www.flaticon.com/premium-icon/pizza_706934?term=pizza&page=1&position=2&page=1&position=2&related_id=706934&origin=search -->
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- register page pop up -->
+
+     <div class="register-page">
+        <img src="../Images/close.png" alt="close button">
+        <p>Register For an Account</p>
+        <div class="page-content">
+            <form id="register-form" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="POST">
+                
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <span class="error-msg correct">Invalid Username can only have latters A-Z</span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-msg correct">Invalid Email or Email not exist</span>
+
+                <label for="pwd1">New Password:</label>
+                <input type="password" name="pwd1" id="pwd1">
+                <span class="error-msg correct">Invalid password</span>
+
+                <label for="pwd2">Retype Password:</label>
+                <input type="password" name="pwd2" id="pwd2">
+                <span class="error-msg correct">Password not match</span>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <label for="pizza">Favorite Pizza:</label>
+                <select name="fav_pizza" id="pizza">
+                    <option value="none">None</option>
+                    <option value="Meat lover">Meat Lover</option>
+                    <option value="Deluxe Vegetables">Deluxe Vegetables</option>
+                    <option value="Deluxe Cheese">Deluxe Cheese</option>
+                </select>
+
+                <div class="allow-checkbox">
+                    <input type="checkbox" name="notify" id="notify" value="true">
+                    <label for="notify">Allow Bruno Pizzeria to send notification related our new recipe</label>
+                </div>
+
+                <div class="form-btn">
+                    <input class= "reset-btn" type="reset">
+                    <input class= "submit-btn" type="submit" value="submit">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="layer"></div>
+
+    
+
+    <!-- Nav bar menu -->
+    <header>
+        <nav class="navbar">
+            <a class="nav-logo" href="">Bruno <span>Pizzeria</span></a>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="order.html">Order Now</a></li>
+                <li class="register-btn">Register</li>
+                <li><a href="feature.html">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="order-section">
+            <form action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="POST" id="order-form" autocomplete="off">
+
+                <h1 id="form-title"><span>Order</span> Information</h1>
+
+                <div id="contact">
+                    <h4>Contact Information</h4>
+                    <div id="first-row">
+                        <div>
+                            <input id="phone" type="text" name="phone-number" placeholder="Phone Number">
+                            <span class="err-msg correct"></span>
+                        </div>
+                        <div>
+                            <input type="email" id="email2" name="email" placeholder="Email">
+                            <span class="err-msg correct">Invalid email, make sure to use @</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="distribution">
+                    <h4>Delivery Information</h4>
+
+                    <div id="second-row">
+                        <div class="form-group">
+                            <input type="radio" name="distribution" id="pickup" value="pickup">
+                            <label for="pickup">Pickup</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="radio" name="distribution" id="delivery" value="delivery">
+                            <label for="delivery">Delivery</label>
+                        </div>
+                    </div>
+
+                    <div id="third-row">
+
+                        <div>
+                            <input type="text" name="address" id="address" placeholder="Address">
+                            <span class="err-msg correct">Address field is empty</span>
+                        </div>
+
+                        <div>
+                            <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+                            <span class="err-msg correct">Postcode field is empty</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="payment">
+                    <h4>Payment Information</h4>
+                    <div id="fourth-row">
+                        <div class="form-group">
+                            <input type="radio" name="payment" id="pay-on-pickup" value="pickup">
+                            <label for="pay-on-pickup">Pay on Pickup</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="radio" name="payment" id="online" value="online">
+                            <label for="online">Online</label>
+                        </div>
+                    </div>
+
+                    <div id="cards">
+                        <span>Payment with:</span>
+
+                        <div class="form-group">
+                            <input type="radio" name="card" id="visa" value="visa">
+                            <label for="visa"><img src="../Images/visa.svg" alt="visa"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="radio" name="card" id="master-card" value="master">
+                            <label for="master-card"><img src="../Images/master-card.svg" alt="master card"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="radio" name="card" id="american-express" value="american">
+                            <label for="american-express"><img src="../Images/american-express.svg" alt="american express"></label>
+                        </div>
+                    </div>
+
+                    <span class="err-msg correct">Pick your card</span>
+
+                    <div id="fifth-row">
+                        <input id="billing" type="text" name="billing-address" placeholder="Billing Address">
+                        <span class="err-msg"></span>
+                        <div>
+                            <input type="checkbox" name="same" id="same" value="same"> 
+                            <label for="same">Same as delivery address</label>
+                        </div>
+                    </div>
+
+                    <div id="sixth-row">
+                        <input id="card-number" type="text" name="card-number" placeholder="Card Number" disabled>
+                        <span class="err-msg correct">Card number field is empty</span>  
+                    </div> 
+                </div>
+
+                <div class="form-btn">
+                    <input class="submit-btn disable" disabled type="submit">
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+</html>
